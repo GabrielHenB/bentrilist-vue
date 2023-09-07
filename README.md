@@ -1,6 +1,10 @@
 # bentrilist-vue
 
-This template should help get you started developing with Vue 3 in Vite.
+BentriList is a web application all about lists! You can create and edit your own list of shows or anime or manga or anything like that!
+Its written in HTML,CSS,Javascript and uses Vue JS and CSS Tailwind, along with Pinia for state management and other plugins.
+
+Bentrilist was firstly coded in PHP Laravel as a server-side application, but this version is fully client-side. You can save your list
+into localStorage OR export it as JSON (This Is In Development yet).
 
 ## Recommended IDE Setup
 
