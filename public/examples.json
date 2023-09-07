@@ -1,0 +1,42 @@
+[
+    {
+        "id":"0",
+        "thumb":"https://www.crunchyroll.com/imgsrv/display/thumbnail/480x720/catalog/crunchyroll/9b4ab6da6eda68a105831ca27aaaf4d5.jpe",
+        "title": "Kono Subarashii Sekai ni Shukufuku wo!",
+        "caps":"100",
+        "last":"0",
+        "completed": "false"
+    },
+    {
+        "id":"1",
+        "thumb":"https://upload.wikimedia.org/wikipedia/pt/thumb/b/b2/Overlord_poster.jpg/250px-Overlord_poster.jpg",
+        "title": "Overlord",
+        "caps":"100",
+        "last":"0",
+        "completed":"true"
+    },
+    {
+        "id":"2",
+        "thumb":"https://cdn.myanimelist.net/images/manga/1/268387.jpg",
+        "title": "Ijiranaide, Nagatoro-san",
+        "caps":"?",
+        "last":"75",
+        "completed":"false"
+    },
+    {
+        "id":"3",
+        "thumb":"https://cdn.myanimelist.net/images/manga/3/207704.jpg",
+        "title": "Yancha Gal no Anjou-san",
+        "caps":"?",
+        "last":"60",
+        "completed":"false"
+    },
+    {
+        "id":"4",
+        "thumb":"https://cdn.myanimelist.net/images/manga/2/188974.jpg",
+        "title": "Kami nomi zo Shiru Sekai",
+        "caps":"200",
+        "last":"2",
+        "completed":"true"
+    }
+]
