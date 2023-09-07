@@ -24,7 +24,7 @@ onMounted(() => {
 </script>
 <template>
     <tr class="pb-10 newrow">
-        <td>00</td>
+        <td><input type="number" class=" entrada" v-model="newrow.id" name="id" placeholder="ID" /></td>
         <td><input type="text" class=" entrada" v-model="newrow.thumb" name="thumb" placeholder="URL da Thumb" /></td>
         <td><input type="text" class=" entrada" v-model="newrow.title" name="title" placeholder="Titulo do Item" /></td>
         <td><input type="text" class=" entrada" v-model="newrow.caps" name="caps" placeholder="Caps/Eps"></td>
