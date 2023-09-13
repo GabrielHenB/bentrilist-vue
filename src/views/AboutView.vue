@@ -19,6 +19,7 @@
 <style>
 .main-wrapper{
   color: #E6DE45;
+  font-size: x-large;
 }
 @media (min-width: 1024px) {
   .about {

@@ -28,7 +28,7 @@
                     <td>{{ item.title }}</td>
                     <td>{{ item.caps }}</td>
                     <td>{{ item.last }}</td>
-                    <td><button @click="editEntry">edit</button><button @click="removeEntry(index, item.id, $event)" class="ml-2">remove</button></td>
+                    <td><button @click="editEntry" class="list-btn">edit</button><button @click="removeEntry(index, item.id, $event)" class="ml-2 list-btn">remove</button></td>
                 </tr>
                 <ListAddForm v-if="renderForm" v-on:send-new="receiveNew"/>
             </tbody>
@@ -40,7 +40,8 @@
 </template>
 
 <script setup>
-import {ref,computed,onMounted} from 'vue';
+import {ref,computed,onMounted, nextTick} from 'vue';
+import {onBeforeRouteLeave} from 'vue-router';
 import ListAddForm from '../components/ListAddForm.vue';
 import SearchForm from '../components/SearchForm.vue';
 
@@ -65,7 +66,12 @@ onMounted(() => {
     }else{
         console.log("Erro na obtençao de dados durante montagem: Dados invalidos!");
     }
-})
+});
+onBeforeRouteLeave((to,from) => {
+    console.log("Salvando lista...");
+    salvarLista();
+    //next();
+});
 // ================== COMPUTED PROPERTIES
 const getCompleted = computed(() => {
     //So se nao estiver completo
@@ -130,12 +136,16 @@ function editEntry(event)
 
 function removeEntry(index, id, event)
 {
-    //TODO: Um modal de aviso no final
     for(let ind in list.value){
         if(list.value[ind].id === id){
-            list.value.splice(ind,1); //Eh reativo??
-            console.log("Indice removido!");
-            return true;
+            if(window.confirm("Tem certeza que quer deletar?")){
+                list.value.splice(ind,1); //Eh reativo??
+                console.log("Indice removido!");
+                return true;
+            }
+            else{
+                return false;
+            }
         }
     }
     console.log("Nao encontrado!");
@@ -165,6 +175,12 @@ td{
 .list-menu{
     background-color: #8045E6;
     color: #E6DE45;
+}
+.list-btn{
+    color: #8045E6;
+}
+.list-btn:hover{
+    color: #f1e724;
 }
 .menu-lateral{
     border-radius: 45%;

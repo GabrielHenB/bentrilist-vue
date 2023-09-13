@@ -2,10 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face{
+  font-family: Sugoi;
+  src: url('./Oswald-VariableFont_wght.ttf') format('woff2 supports variations'),
+  url('./Oswald-VariableFont_wght.ttf') format('woff2-variations');
+  font-weight: 100 1000;
+	font-stretch: 25% 151%;
+}
 
 body{
   /*background-color: #9E66FF;
-  background-color:blanchedalmond;*/
+  background-color: #101010;*/
   background-color: #101010;
   color: #ffffff;
+  font-family: Sugoi, Arial, Helvetica, sans-serif;
 }

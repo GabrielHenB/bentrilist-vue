@@ -35,6 +35,10 @@ onMounted(() => {
 
 <style scoped>
 .entrada{
-    color: black;
+    color: white;
+    margin: 0px 2px;
+    padding: 0px 2px;
+    background-color: #242424;
+    border: 1px solid white;
 }
 </style>
